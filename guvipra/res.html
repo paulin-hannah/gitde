@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RESUME</title>
+    </head>
+    <h1> Creating Resume data in JSON format</h1>
+    <body>
+        <script>
+           let resume={
+    Name:"paulin cinthia hannah J",
+    FathersName:"Johny francis",
+    Mobile:"9500034567",
+    Education:[
+        {
+            Qualification:"SSLC",
+            Institution:"Government school",
+            Percentage:"80"
+
+        },
+           { 
+            Qualification:"HSC",
+            Institution:"Government school",
+            Percentage:"79"
+
+           },
+            {
+            Qualification:"B.E",
+            Institution:"periyar maniammai college of technology",
+            Percentage:"69"
+            },
+            {
+            Qualification:"M.E",
+            Institution:"AVIT",
+            Percentage:"82"
+            }
+        ],
+        ProgrammingSkill:["c","SQl"]
+        }
+        for(let e in resume)
+    console.log(resume[e])    
+    </script>
+    </body>
+</html> 
+        
