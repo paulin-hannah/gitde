@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display the countries</title>
+</head>
+<body>
+<h1>Hello</h1>
+        <h2>Print the total population of countries using reduce function </h2>
+        <script>
+            console.log("Welcome to HTML JS")
+            function handleData(){
+             let data =JSON.parse(this.responseText)
+             var cur=[];
+for(i=0;i<data.length;i++){
+if(data[i].currencies[0].code==="$")
+{
+console.log("name:",data[i].name,"==>",data[i].currencies[0].code)
+}
+}
+}
+
+const req = new XMLHttpRequest();
+            req.addEventListener('load',handleData)
+            req.open("GET","https://restcountries.com/v3.1/all")
+            req.send()
+        </script>
+        </body>
+
+
+

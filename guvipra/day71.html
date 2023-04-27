@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display the countries</title>
+</head>
+<body>
+<h1>Hello</h1>
+        <h2>population in countries less than 200000</h2>
+        <script>
+            console.log("Welcome to HTML JS")
+            function handleData(){
+             let data =JSON.parse(this.responseText)
+             const popu=data.filter((element)=>{
+return element.population<200000;
+})
+console.log(popu);}
+
+
+
+            const req = new XMLHttpRequest();
+            req.addEventListener('load',handleData)
+            req.open("GET","https://restcountries.com/v3.1/all")
+            req.send()
+        </script>
+        </body>
